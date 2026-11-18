@@ -1,45 +1,19 @@
 interface BrandMarkProps {
   className?: string;
-  inverted?: boolean;
+  size?: 'sm' | 'lg';
 }
 
-export function BrandMark({ className = '', inverted = false }: BrandMarkProps) {
-  const iconColor = inverted ? '#fefae0' : '#606c38';
-  const accentColor = inverted ? '#fefae0' : '#bc6c25';
-  const textColor = inverted ? 'text-[#fefae0]' : 'text-[#283618]';
+export function BrandMark({ className = '', size = 'sm' }: BrandMarkProps) {
+  const heightClass = size === 'lg' ? 'h-20 sm:h-24' : 'h-13 sm:h-14';
 
   return (
-    <span className={`inline-flex items-center gap-2.5 whitespace-nowrap shrink-0 ${className}`}>
-      <svg
-        width="26"
-        height="26"
-        viewBox="0 0 28 28"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        <path
-          d="M14 4C14 10.5 9.5 14 5.5 14.5C9.5 15.5 13 18.5 14 24"
-          stroke={iconColor}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M14 4C14 9.5 18 12.5 22.5 13C18.5 14.2 15.2 17.5 14 24"
-          stroke={iconColor}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <circle cx="14" cy="24.5" r="1.75" fill={accentColor} />
-      </svg>
-      <span
-        className={`font-display text-xl font-bold tracking-tight leading-none ${textColor}`}
-      >
-        Raíz
-      </span>
+    <span className={`inline-flex items-center whitespace-nowrap shrink-0 ${className}`}>
+      <img
+        src="/assets/aistudio/ChatGPT_Image_8_oct_2026__02_31_06_p.m._a0c38029.png"
+        alt="Raíz — Viandas caseras"
+        referrerPolicy="no-referrer"
+        className={`${heightClass} w-auto object-contain mix-blend-multiply select-none`}
+      />
     </span>
   );
 }

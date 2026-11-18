@@ -11,7 +11,7 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <div className="flex flex-col gap-2">
             <a href="#inicio" className="self-start">
-              <BrandMark />
+              <BrandMark size="lg" />
             </a>
             <p className="inline-flex items-center gap-1.5 text-sm text-[#283618]/75">
               <MapPin className="w-4 h-4 text-[#bc6c25] shrink-0" aria-hidden="true" />
