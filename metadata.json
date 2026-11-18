@@ -1,0 +1,6 @@
+{
+  "name": "Raíz — Viandas Caseras",
+  "description": "Viandas caseras con ingredientes locales y de estación en San Salvador de Jujuy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
